@@ -21,11 +21,11 @@ function verNombres(){
 }
 
 
-/*function escogerJugador(){
-    for(i = 0;i<nombreUsuarios.length;i++){
-        console.log(`jugador: ${i} -> ${nombreUsuarios[i]}`);
-    }
-}*/
+function escogerJugador(){
+    let seleccionJugador = "";
+    seleccionJugador = nombreUsuarios[Math.floor(Math.random()*nombreUsuarios.length)];
+    console.log(seleccionJugador);
+}
 
 
 
