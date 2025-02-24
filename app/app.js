@@ -1,38 +1,49 @@
-console.log("Hola Mundo");
 let nombreUsuarios = [];
 
+//funcion para obtener el nombre de los jugadores
 function nombreUsuario(){
-    let nombreUsuario = document.getElementById('nombreUsuario').value;
+    let nombreUsuario = document.getElementById('nombre-jugador').value;
     if(nombreUsuario == ""){
         alert("Nombre de jugador vacio");
     }else{
         nombreUsuarios.push(nombreUsuario);
+        limpiarCaja();
         verNombres();
-        //escogerJugador();
     }
-    
 }
+
+//funcion para ver los nombres de los jugadores
 function verNombres(){
     let nombres = "";
-    for(i = 0;i<nombreUsuarios.length;i++){
+    for(let i = 0;i<nombreUsuarios.length;i++){
         nombres += `Jugador: ${i+1} -> ${nombreUsuarios[i]}</br>`;
     }
-    asignarTextoElemento('p',`</br> ${nombres}`);
+    asignarTextoByID('jugadores',`</br> ${nombres}`);
 }
 
-
+//funcion para obtener en random el nombre del jugador
 function escogerJugador(){
     let seleccionJugador = "";
-    seleccionJugador = nombreUsuarios[Math.floor(Math.random()*nombreUsuarios.length)];
-    console.log(seleccionJugador);
+    if(nombreUsuarios.length === 0){
+        alert("No hay jugadores");
+        return;
+    }else{
+        seleccionJugador = nombreUsuarios[Math.floor(Math.random()*nombreUsuarios.length)];
+        asignarTextoByID('seleccion-jugador',`Jugador: ${seleccionJugador}`); 
+    }
 }
 
 
-
-
-function asignarTextoElemento(elemento, texto) {
-    let elementoHTML = document.querySelector(elemento);
-    elementoHTML.innerHTML = texto;
+//funciona para reutilizar
+function asignarTextoByID(id,texto){
+    let idHTML = document.getElementById(id);
+    idHTML.innerHTML = texto;
     return;
 }
 
+//funcion para limpar input de texto
+function limpiarCaja(){
+    let valorCaja = document.getElementById('nombre-jugador');
+    valorCaja.value = ""; 
+    valorCaja.focus();
+}
