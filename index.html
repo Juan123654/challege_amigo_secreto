@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Amigo Secreto</title>
 </head>
 <body>
-    <header>
-        <h1>Challenge</h1>
-        <h2>Amigo Secreto </h2>
+    <header class="header">
+        <h1 class="header__titulo">Challenge</h1>
+        <h2 class="header__titulo_dos">Amigo Secreto </h2>
     </header>
-    <main>
+    <main class="presentacion">
+        <section class="presentacion__contenido">
+            <input type="text" id="nombre-jugador" class="presentacion__contenido__input" >
+            <button class="presentacion__contenido__botones" onclick="nombreUsuario()">Ingrese el nombre</button>
+            <button class="presentacion__contenido__botones" onclick="escogerJugador()">Seleccionar Jugador</button>
+        </section>
         <div>
-            <input type="text" id="nombre-jugador" >
-            <button onclick="nombreUsuario()">Ingrese el nombre</button>
-            <button onclick="escogerJugador()">Seleccionar Jugador</button>
+            <p id="jugadores" class="presentacion__contenido__jugadores"></p>
         </div>
         <div>
-            <p id="jugadores"></p>
+            <p id="seleccion-jugador" class="presentacion__contenido__jugador__escogido"></p>
         </div>
-        <div>
-            <p id="seleccion-jugador"></p>
-        </div>
+        <img class="presentacion__imagen__personal" src="./assets/caja-regalo.jpg" alt="https://www.freepik.es/fotos-premium/caja-regalo-cinta-cuaderno-limpio-lapiz-sobre-tabla-amarilla-confeti-estrellas-brillantes_7106885.htm#fromView=keyword&page=1&position=40&uuid=f1807728-31c3-4881-a4ef-1531e0cbb25d&query=Amigo+Secreto">
     </main>
     <footer>
 

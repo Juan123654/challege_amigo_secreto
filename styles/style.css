@@ -1,0 +1,97 @@
+:root{
+    --color-primario:#000000;
+    --color-secundario:#f6f6f6;
+    --color-terciario:#22fdf2;
+    --color-hover:#fd6722;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--color-primario);
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+}
+.header__titulo{
+    color: var(--color-terciario);
+    font-size: 80px;
+}
+.header__titulo_dos{
+    color: var(--color-secundario);
+    font-size: 80px;
+}
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 1% 20%;
+    justify-content: space-between;
+    gap: 10px;
+}
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.presentacion__contenido__input{
+    width: 50%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.presentacion__contenido__input:hover{
+    border: 2px solid var( --color-hover);
+}
+.presentacion__contenido__botones{
+    width: 50%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.presentacion__contenido__jugadores{
+    color: var(--color-secundario);
+    width: 250px;
+    font-size: 1.5rem;
+}
+.presentacion__contenido__jugador__escogido{
+    color: var(--color-secundario);
+    margin: 20px;
+    width: 250px;
+    padding: 0px;
+    font-size: 1.5rem;
+}   
+.presentacion__imagen__personal{
+    width: 50%;
+    height: 500px;
+    border-radius: 15px;
+}
+
+@media(max-width:1200px){
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+
+    }
+    .presentacion__contenido{
+        width: auto;
+    }
+}
