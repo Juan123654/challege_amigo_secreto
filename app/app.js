@@ -16,7 +16,7 @@ function nombreUsuario(){
 function verNombres(){
     let nombres = "";
     for(let i = 0;i<nombreUsuarios.length;i++){
-        nombres += `Jugador: ${i+1} -> ${nombreUsuarios[i]}</br>`;
+        nombres += `Jugador ${i+1}:  ${nombreUsuarios[i]}</br>`;
     }
     asignarTextoByID('jugadores',`</br> ${nombres}`);
 }

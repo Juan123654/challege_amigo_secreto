@@ -67,10 +67,17 @@ body{
     justify-content: center;
     gap: 16px;
 }
+.presentacion__contenido__caja{
+    width: auto;
+    height: auto;
+    border: 2px solid var(--color-terciario);
+    border-radius: 15px;
+}
 .presentacion__contenido__jugadores{
     color: var(--color-secundario);
-    width: 250px;
-    font-size: 1.5rem;
+    width: 200px;
+    height: auto;
+    font-size: 1.7rem;
 }
 .presentacion__contenido__jugador__escogido{
     color: var(--color-secundario);
